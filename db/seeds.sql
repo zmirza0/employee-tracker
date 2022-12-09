@@ -1,25 +1,27 @@
-INSERT INTO department (name)
-VALUES ('Sales'),
-       ('Engineering'),
-       ('Finance'),
-       ('Legal'),
+INSERT INTO departments(name)
+    VALUES  ("Engineering"),
+            ("Finance"),
+            ("Legal"),
+            ("Sales");
 
-INSERT INTO role (department_id, title, salary)
-VALUES (1, 'Sales Lead', 100000),
-       (2, 'Salesperson', 80000),
-       (3, 'Lead Engineer', 150000),
-       (4, 'Software Engineer', 120000),
-       (5, 'Account Manager', 160000),
-       (6, 'Accountant', 125000),
-       (7, 'Legal Team Lead', 250000),
-       (8, 'Lawyer,', 190000);
+INSERT INTO roles(title, salary, departments_id)
+    VALUES  ("Sales Lead", 100000, 4),
+            ("Salesperson", 100000, 4),
+            ("Lead Engineer", 120000, 1),
+            ("Software Engineer", 110000, 1),
+            ("Account Manager", 100000, 2),
+            ("Accountant", 90000, 3),
+            ("Legal Team Lead", 200000, 3),
+            ("Lawyer", 100000, 3);
 
-INSERT INTO employee (role_id, manager_id, first_name, last_name)
-VALUES (1, NULL, 'John', 'Doe'),
-       (2, 1, 'Mike', 'Chan'),
-       (3, NULL, 'Ashley', 'Rodriguez'),
-       (4, 3, 'Kevin', 'Tupik'),
-       (5, NULL, 'Kunal', 'Singh'),
-       (6, 5, 'Malia', 'Brown'),
-       (7, NULL, 'Sarah', 'Lourd'),
-       (8, 9, 'Tom', 'Allen');
+INSERT INTO employees(first_name, last_name, roles_id, manager_id)
+    VALUES  ("Jose", "Brown", 1, NULL),
+            ("Dan", "Smith", 2, 1),
+            ("Jess", "Jones", 2, 1),
+            ("Mike", "Jack", 3, NULL),
+            ("Hailey", "Len", 4, NULL),
+            ("Godwin", "Santos", 5, 5),
+            ("Rose", "Johnson", 5, 5),
+            ("Jane", "Doe", 6, NULL),
+            ("Daniella", "Garcia", 7, 8),
+            ("Emma", "Watson", 7, 8);
